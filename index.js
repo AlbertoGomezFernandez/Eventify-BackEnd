@@ -1,8 +1,8 @@
 const express = require('express');
 const { connectDB } = require('./src/config/db');
 const usersRouter = require('./src/api/routes/user.routes');
-const eventsRouter = require('./src/api/routes/event.routes');
-const attendeesRouter = require('./src/api/routes/attendee.routes');
+const eventsRouter = require('./src/api/routes/events.routes');
+const attendeesRouter = require('./src/api/routes/attendees.routes');
 require("dotenv").config();
 const cors = require('cors');
 const { connectCloudinary } = require('./src/config/cloudinary');
