@@ -28,7 +28,7 @@ app.use("/api", attendeesRouter);
 
 
 app.use("*", (req, res, next) => {
-  return res.status(404).json("Route not found");
+  return res.status(404).json("Route not found 2");
 });
 
 
