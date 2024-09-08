@@ -3,9 +3,9 @@ const upload = require("../../middlewares/file");
 const { getEvents, getEventById, createEvent, deleteEvent } = require("../controllers/event");
 
 const eventsRouter = require("express").Router();
-
+/* Testing routes in Vercel */
 eventsRouter.get("/event", (req, res, next) => {
-  return res.status(202).json("sirvio");
+  return res.status(202).json("Testing event response in Vercel");
 });
 eventsRouter.get("/events", getEvents);
 
