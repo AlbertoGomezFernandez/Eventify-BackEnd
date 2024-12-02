@@ -17,8 +17,19 @@ connectCloudinary();
 
 app.use(express.json());
 
+const allowedOrigins = [
+  'https://eventify-bqjoqekvi-alberto-gomez-fernandezs-projects.vercel.app',
+  'https://eventify-sigma-seven.vercel.app'
+];
+
 app.use(cors({
-  origin: "https://eventify-sigma-seven.vercel.app/"
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      return callback(new Error('CORS policy error: Origin not allowed'), false);
+    }
+    return callback(null, true);
+  }
 }));
 
 app.use("/api", usersRouter);
