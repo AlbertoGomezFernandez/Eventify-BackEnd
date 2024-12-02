@@ -18,7 +18,7 @@ connectCloudinary();
 app.use(express.json());
 
 app.use(cors({
-  origin: "https://eventify-sigma-seven.vercel.app/#"
+  origin: "https://eventify-sigma-seven.vercel.app/"
 }));
 
 app.use("/api", usersRouter);
